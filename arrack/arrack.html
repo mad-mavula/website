@@ -1,0 +1,434 @@
+<html>
+		<title>Arrack</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="webpage1.css">
+		<link rel="stylesheet" type="text/css" href="Untitled-2.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script language="javascript" type="text/javascript" src="test1.js"></script>
+	<body>
+
+		<div class="social">
+			  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+			  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+			  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+			  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+			  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+		</div>
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+		<script>
+			//Get the button
+			var mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			    mybutton.style.display = "block";
+			  } else {
+			    mybutton.style.display = "none";
+			  }
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			}
+		</script>
+
+		<table border="0" width=100%>
+			<tr><td><h1>Brandy</h1><p>DON'T<br>DRINK & DRIVE, SMOKE & FLY</p><img class="img1" src="cheers.png"></td></tr>
+			<tr><td><h2>Choose alcohol<br>-free days<img class="img3" src="signage.png"></h2></td></tr>
+		</table>
+		
+					<div class="icon-bar">
+							<a class="active"><i class="fa fa-bars"></i> Menu</a>
+							<a href="#"><i class="fa fa-home"></i> Home</a>
+				  			<a href="#"><i class="fa fa-shopping-cart"></i> Buy</a>
+				  			<a href="#"><i class="fa fa-phone"></i> Contact</a> 
+				  			<a href="#"><i class="fa fa-user"></i> Login</a> 
+				  			<a href="#"><i class="fa fa-search"></i> Search</a>
+					</div>
+				<div class="id">
+				<table border=0 align="center" width="90%">
+				<tr>
+                                      <td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="super.jpg">
+							</div>
+							<div class="bottlename">DCSL Extra special Arrack.750ml</div>
+							<div class="price">Rs.8,010.00</div>
+							<div class="quantity">
+	    						<input type="submit" value="-" class="quantbutton" onClick="quantminus('ESA')">
+	    
+								<input class="quantbox" type="text" id="ESA" name="quant" value=1>
+		
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('ESA')">
+		
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="1.jpg">
+							</div>
+							<div class="bottlename">White diam. lemon Arrack.750ml</div>
+							<div class="price">Rs.8,010.00</div>
+							<div class="quantity">
+	    						<input type="submit" value="-" class="quantbutton" onClick="quantminus('WDL')">
+	    
+								<input class="quantbox" type="text" id="WDL" name="quant" value=1>
+		
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('WDL')">
+		
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="2.jpg">
+							</div>
+							<div class="bottlename">IDL Gold label Arrack.750ml</div>
+							<div class="price">Rs.7,900.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('IDLGL')">
+							    
+								<input class="quantbox" type="text" id="IDLGL" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('IDLGL')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="3.jpg">
+							</div>
+							<div class="bottlename">Vat9 Arrack.750ml</div><br>
+							<div class="price">Rs.8,000.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('VAT9')">
+							    
+								<input class="quantbox" type="text" id="VAT9" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('VAT9')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+				</tr>
+                                <tr>
+                                  	<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="4.jpg">
+							</div>
+							<div class="bottlename">Rockland old Arrack.750ml</div><br>
+							<div class="price">Rs.6,010.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('ROA')">
+							    
+								<input class="quantbox" type="text" id="ROA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('ROA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+				
+
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="5.jpg">
+							</div>
+							<div class="bottlename">Rockland VX Arrack.750ml</div><br>
+							<div class="price">Rs.7,500.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('RVX')">
+							    
+								<input class="quantbox" type="text" id="RVX" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('RVX')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="7.jpg">
+							</div>
+							<div class="bottlename">Ceylon Arrack.700ml</div><br>
+							<div class="price">Rs.9,250.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('CA')">
+							    
+								<input class="quantbox" type="text" id="CA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('CA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="8.jpg">
+							</div>
+							<div class="bottlename">Blue sapphire Arrack.750ml</div>
+							<div class="price">Rs.6,350.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('BSA')">
+							    
+								<input class="quantbox" type="text" id="BSA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('BSA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+                              </tr>
+                              <tr>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="9.jpg">
+							</div>
+							<div class="bottlename">Halmilla age old Arrack.750ml</div>
+							<div class="price">Rs.5,500.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('HAOA')">
+							    
+								<input class="quantbox" type="text" id="HAOA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('HAOA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+				
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="10.jpg">
+							</div>
+							<div class="bottlename">Governer's choice Arrack.750ml</div>
+							<div class="price">Rs.8,250.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('GCA')">
+							    
+								<input class="quantbox" type="text" id="GCA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('GCA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="11.jpg">
+							</div>
+							<div class="bottlename">King Edward black Arrack.750ml</div>
+							<div class="price">Rs.5,750.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('KEBA')">
+							    
+								<input class="quantbox" type="text" id="KEBA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('KEBA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="12.jpg">
+							</div>
+							<div class="bottlename">Rockland three star Arrack.750ml</div>
+							<div class="price">Rs.8,900.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('KTSA')">
+							    
+								<input class="quantbox" type="text" id="KTSA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('KTSA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+                                </tr>
+				<tr>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="13.jpg">
+							</div>
+							<div class="bottlename">Rockland double distilled Arrack.750ml</div>
+							<div class="price">Rs.6,500.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('RDDA')">
+							    
+								<input class="quantbox" type="text" id="RDDA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('RDDA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+				
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="14.jpg">
+							</div>
+							<div class="bottlename">White diamond green apple Arrack.750ml</div>
+							<div class="price">Rs.7,950.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('WDGAA')">
+							    
+								<input class="quantbox" type="text" id="WDGAA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('WDGAA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="15.jpg">
+							</div>
+							<div class="bottlename">Paradise white coconut Arrack.750ml</div>
+							<div class="price">Rs.4,900.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('PWCA')">
+							    
+								<input class="quantbox" type="text" id="PWCA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('PWCA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="16.jpg">
+							</div>
+							<div class="bottlename">English apple Arrack.750ml</div><br>
+							<div class="price">Rs.8,100.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('EAA')">
+							    
+								<input class="quantbox" type="text" id="EAA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('EAA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+                                 </tr>
+				<tr>
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="17.jpg">
+							</div>
+							<div class="bottlename">Premium grape Arrack.750ml</div>
+							<div class="price">Rs.6,250.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('PGA')">
+							    
+								<input class="quantbox" type="text" id="PGA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('PGA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+				
+					<td id="align">
+						<div class="container">
+							<div class="image">
+								<img class="bottlepics" src="18.jpg">
+							</div>
+							<div class="bottlename">Tropical mango Arrack.750ml</div>
+							<div class="price">Rs.4,750.00</div>
+							<div class="quantity">
+							    <input type="submit" value="-" class="quantbutton" onClick="quantminus('TMA')">
+							    
+								<input class="quantbox" type="text" id="TMA" name="quant" value=1>
+								
+								<input type="submit" class="quantbutton" value="+" onClick="quantplus('TMA')">
+								
+  							</div>
+  							<div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+  
+						</div>
+					</td>
+					
+				</tr>
+				</table>
+		</div>
+		<table class="last" border="0" width='100%' align="center">
+			<tr>
+				<td>
+					<b><u>XXXXXX</u></b>
+					<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXX</p>
+				</td>
+				<td>
+					<b><u>XXXXXX</u></b>
+					<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXX</p>
+				</td>
+				<td>
+					<b><u>XXXXXX</u></b>
+					<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXX</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
