@@ -1,6 +1,12 @@
-.itemcontainer{
-	background-color: #b0b435;
-	height:350px;
+.container{
+	font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    padding: 4px;
+    display: inline-block;
+    background-color: #b0b435;
+    color: #ffffff;
+    font-weight: 600;
+	height:290px;
 	width:172px;
 	position: relative;
 	margin:10px;
@@ -15,7 +21,7 @@
 	margin-left:10px;
 	margin-right:10px;
 	margin-bottom:10px;
-	margin-top:4px;
+	margin-top:0px;
 	position: relative;
 	
 }
@@ -27,19 +33,18 @@
 
 .price{
 	color:black;
-	font-family: 'Poppins', sans-serif;
-	margin:5px;
+	font-family:Arial Black ;
+	margin:10px;
 	position: relative;
 	font-size:12px;
 	
 }
 
 .bottlename{
-	font-family: 'Poppins', sans-serif;
-	color: white;
+	font-size: 18px;
+    font-family: 'Poppins', sans-serif;
 	margin:5px;
 	position: relative;
-	font-size:15px;
 	
 }
 
@@ -55,7 +60,6 @@
 .quantbox{
 	width:30px;
 	float:left;
-	text-align: center;
 	color: black;
 	
 
@@ -71,7 +75,7 @@
 }
 
 .add {
-	margin:5px;
+	margin:10px;
 	background:black;
 	border: 1px solid black;
 	padding:10px;
@@ -79,11 +83,10 @@
 	font-size: 10px;
 	color:white;
 	border-radius:10px;
-	padding-bottom: 2px;
 }
 
 .cartbutton{
-	position: absolute;
+	position: relative;
 	left:65px;
 	bottom:33px;
 	width:90px;
@@ -98,10 +101,3 @@
 
 }
 
-#align
-{
-  padding-left: 70px;
-  padding-right: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
