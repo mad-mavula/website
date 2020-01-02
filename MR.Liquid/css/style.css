@@ -326,6 +326,7 @@
 /* Navbar Adjusment =========================== */
 /* Navbar Atribute ------*/
  .attr-nav > ul > li > a{
+     margin-right: 30px;
      padding: 28px 15px;
 }
  ul.cart-list > li.total > .btn{
