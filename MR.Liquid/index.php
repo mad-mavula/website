@@ -101,7 +101,7 @@ require_once("carthandler.php");
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <div>
-                    <a href="arrack.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
+                    <a href="index.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
                 </div>
                 <?php
                     if(isset($_SESSION["cart_item"])){
@@ -118,6 +118,7 @@ require_once("carthandler.php");
                             <a href="#" class="photo"><img src="<?php echo $item["image"]; ?>" class="cart-thumb" alt="" /></a>
                             <h6><a href="#"><?php echo $item["name"]; ?></a></h6>
                             <p><?php echo $item["quantity"]; ?>x - <span class="price"><?php echo "Rs. ". number_format($item_price,2); ?></span></p>
+                            <p style="text-align:center;"><a href="index.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
                             <?php
                                 $total_quantity += $item["quantity"];
                                 $total_price += ($item["price"]*$item["quantity"]);
