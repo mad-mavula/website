@@ -17,7 +17,7 @@ require_once("carthandler.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>About Us</title>
+    <title>Shop</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -33,6 +33,8 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="javascript" type="text/javascript" src="js/test1.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -57,13 +59,13 @@ require_once("carthandler.php");
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="about.php">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                            <a href="#" class="nav-link nav-item active dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
                                 <li><a href="arrack.php">Arrack</a></li>
                                 <li><a href="wine.php">Wine</a></li>
@@ -73,7 +75,7 @@ require_once("carthandler.php");
                                 <li><a href="beer.php">Beer</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.php">Contact Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact-us.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -100,7 +102,13 @@ require_once("carthandler.php");
                     </ul>
                 </div>
                 <div class="submit-button text-center">
+                     <?php
+					if (isset($_SESSION['userid'])){
+						echo ' <form action="dbf/logout.dbf.php" method="POST">
                     <button class="btn hvr-hover" id="submit" type="submit">Log Out</button>
+					</form>';
+					}
+					?>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </div>
@@ -110,7 +118,7 @@ require_once("carthandler.php");
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <div>
-                    <a href="arrack.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
+                    <a href="whisky.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
                 </div>
                 <?php
                     if(isset($_SESSION["cart_item"])){
@@ -127,7 +135,7 @@ require_once("carthandler.php");
                             <a href="#" class="photo"><img src="<?php echo $item["image"]; ?>" class="cart-thumb" alt="" /></a>
                             <h6><a href="#"><?php echo $item["name"]; ?></a></h6>
                             <p><?php echo $item["quantity"]; ?>x - <span class="price"><?php echo "Rs. ". number_format($item_price,2); ?></span></p>
-                            <p style="text-align:center;"><a href="about.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
+                            <p style="text-align:center;"><a href="whisky.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
                             <?php
                                 $total_quantity += $item["quantity"];
                                 $total_price += ($item["price"]*$item["quantity"]);
@@ -168,10 +176,10 @@ require_once("carthandler.php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>ABOUT US</h2>
+                    <h2>Shop</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">ABOUT US</li>
+                        <li class="breadcrumb-item active"> Whisky </li>
                     </ul>
                 </div>
             </div>
@@ -179,52 +187,45 @@ require_once("carthandler.php");
     </div>
     <!-- End All Title Box -->
 
-    <!-- Start About Page  -->
-    <div class="about-box-main">
-        <div class="container">
-            <div class="row">
-				<div class="col-lg-6">
-                    <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="noo-sh-title-top">We are <span>Mr. Liquid</span></h2>
-                    <p>Taking your stress and worries away since _enter a year_ we at Mr. Liquid will serve you your favourite wine and liquor. Whether you need a local bottle of wine, a popular bottle of liquor or something from another country, you’ll never leave empty-handed or dissatisfied. Utilising the latest state of the art facilities, our breweries and vineyards ensure that you can get a taste of our own productions as well.</p>
-                    <p>Visit us today and get a taste of luxury for a price that is not hurtful at all!
-                    	Stop searching far and wide for your next bottle of
-                    	Booze
-                        Brandy
-                        Whisky 
-                        Arrack 
-                        Wine 
-                        Vodka.<br>
-
-                       Dalmore or Ansac, Red or White, Scotch or Bourbon, Batavia or Ceylon, you want it - we got it.</p>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>Best Brands</h3>
-                        <p>Best quality liquer right to your doorstep. </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>Best Prices</h3>
-                        <p>Best prices in the island.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>More than 300+ products to choose from</h3>
-                        <p>Witness the massive stock we have in our inventory, giving you a wide variety to choose from. </p>
-                    </div>
-                </div>
-            </div>
+    <!-- Start Whisky Page  -->
+                <div class="id">
+                <table border=0 align="center" width="80%">
+                <tr>
+                    <td id="align">
+                    <?php
+                        $product_array = $db_handle->runQuery("SELECT * FROM whisky ORDER BY id ASC");
+                        if (!empty($product_array)) { 
+                            foreach($product_array as $key=>$value){
+                    ?>
+                        <div class="itemcontainer">
+                        <form method="post" action="whisky.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                            <div class="image">
+                                <img class="bottlepics" src="<?php echo $product_array[$key]["image"]; ?>">
+                            </div>
+                            <div class="bottlename"><?php echo $product_array[$key]["name"]; ?></div>
+                            <div class="price"><?php echo "Rs. ".$product_array[$key]["price"]; ?></div>
+                            <div class="quantity">
+                                <input type="button" value="-" class="quantbutton" onClick="quantminus('ESA<?php echo $product_array[$key]["id"]; ?>')">
+        
+                                <input class="quantbox" type="text" id="ESA<?php echo $product_array[$key]["id"]; ?>" name="quantity" value=1>
+        
+                                <input type="button" class="quantbutton" value="+" onClick="quantplus('ESA<?php echo $product_array[$key]["id"]; ?>')">
+        
+                            </div>
+                            <div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
+                        </form>
+                        </div>
+                        <?php
+                            }
+                        }
+                    ?>
+                    </td>
+                </tr>
+            </table>
         </div>
-    </div>
-    <!-- End About Page -->
+        
+
+    <!-- End Whisky Page -->
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
@@ -314,7 +315,7 @@ require_once("carthandler.php");
     <!-- End Instagram Feed  -->
 
 
-    <!-- Start Footer  -->
+   <!-- Start Footer  -->
     <footer>
         <div class="footer-main">
             <div class="container">

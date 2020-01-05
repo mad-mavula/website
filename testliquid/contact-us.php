@@ -17,7 +17,7 @@ require_once("carthandler.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Shop</title>
+    <title>Contact Us</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -33,8 +33,6 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script language="javascript" type="text/javascript" src="js/test1.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -75,7 +73,7 @@ require_once("carthandler.php");
                                 <li><a href="beer.php">Beer</a></li>
                             </ul>
                         </li>
-						<li class="nav-item"><a class="nav-link" href="contact-us.php">Contact Us</a></li>
+						<li class="nav-item active"><a class="nav-link" href="contact-us.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -102,7 +100,13 @@ require_once("carthandler.php");
                     </ul>
                 </div>
                 <div class="submit-button text-center">
+                   <?php
+					if (isset($_SESSION['userid'])){
+						echo ' <form action="dbf/logout.dbf.php" method="POST">
                     <button class="btn hvr-hover" id="submit" type="submit">Log Out</button>
+					</form>';
+					}
+					?>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </div>
@@ -129,7 +133,7 @@ require_once("carthandler.php");
                             <a href="#" class="photo"><img src="<?php echo $item["image"]; ?>" class="cart-thumb" alt="" /></a>
                             <h6><a href="#"><?php echo $item["name"]; ?></a></h6>
                             <p><?php echo $item["quantity"]; ?>x - <span class="price"><?php echo "Rs. ". number_format($item_price,2); ?></span></p>
-                            <p style="text-align:center;"><a href="arrack.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
+                            <p style="text-align:center;"><a href="contact-us.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
                             <?php
                                 $total_quantity += $item["quantity"];
                                 $total_price += ($item["price"]*$item["quantity"]);
@@ -170,10 +174,10 @@ require_once("carthandler.php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Shop</h2>
+                    <h2>Contact Us</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active"> Arrack </li>
+                        <li class="breadcrumb-item active"> Contact Us </li>
                     </ul>
                 </div>
             </div>
@@ -181,45 +185,70 @@ require_once("carthandler.php");
     </div>
     <!-- End All Title Box -->
 
-    <!-- Start Arrack Page  -->
-                <div class="id">
-                <table border=0 align="center" width="80%">
-                <tr>
-                    <td id="align">
-                    <?php
-                        $product_array = $db_handle->runQuery("SELECT * FROM arrack ORDER BY id ASC");
-                        if (!empty($product_array)) { 
-                            foreach($product_array as $key=>$value){
-                    ?>
-                        <div class="itemcontainer">
-                        <form method="post" action="arrack.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-                            <div class="image">
-                                <img class="bottlepics" src="<?php echo $product_array[$key]["image"]; ?>">
+    <!-- Start Contact Us  -->
+    <div class="contact-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="contact-form-right">
+                        <h2>GET IN TOUCH</h2>
+                        <p>Opening a support case is easy. Email us your issue to get in contact with an expert.</p>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="submit-button text-center">
+                                        <button class="btn hvr-hover" id="submit" type="submit">Send Message</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="bottlename"><?php echo $product_array[$key]["name"]; ?></div>
-                            <div class="price"><?php echo "Rs. ".$product_array[$key]["price"]; ?></div>
-                            <div class="quantity">
-                                <input type="button" value="-" class="quantbutton" onClick="quantminus('ESA<?php echo $product_array[$key]["id"]; ?>')">
-        
-                                <input class="quantbox" type="text" id="ESA<?php echo $product_array[$key]["id"]; ?>" name="quantity" value=1>
-        
-                                <input type="button" class="quantbutton" value="+" onClick="quantplus('ESA<?php echo $product_array[$key]["id"]; ?>')">
-        
-                            </div>
-                            <div class="cartbutton"> <input type="submit" class="add pulse slide" value="ADD TO CART"></div>
                         </form>
-                        </div>
-                        <?php
-                            }
-                        }
-                    ?>
-                    </td>
-                </tr>
-                </table>
+                    </div>
+                </div>
+				<div class="col-lg-4 col-sm-12">
+                    <div class="contact-info-left">
+                        <h2>CONTACT INFO</h2>
+                        <p>Still looking for help? Contact one of our employees</p>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Dutch Hospital - Shopping Precinct,<br>Hospital Street,<br>Colombo. </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+94 778855094">+94 778855094</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:infoMrLiquid@gmail.com">infoMrLiquid@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-
-    <!-- End Arrack Page -->
+    </div>
+    <!-- End Cart -->
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">

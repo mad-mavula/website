@@ -102,7 +102,13 @@ require_once("carthandler.php");
                     </ul>
                 </div>
                 <div class="submit-button text-center">
+                    <?php
+					if (isset($_SESSION['userid'])){
+						echo ' <form action="dbf/logout.dbf.php" method="POST">
                     <button class="btn hvr-hover" id="submit" type="submit">Log Out</button>
+					</form>';
+					}
+					?>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </div>
@@ -112,7 +118,7 @@ require_once("carthandler.php");
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <div>
-                    <a href="beer.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
+                    <a href="brandy.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
                 </div>
                 <?php
                     if(isset($_SESSION["cart_item"])){
@@ -129,7 +135,7 @@ require_once("carthandler.php");
                             <a href="#" class="photo"><img src="<?php echo $item["image"]; ?>" class="cart-thumb" alt="" /></a>
                             <h6><a href="#"><?php echo $item["name"]; ?></a></h6>
                             <p><?php echo $item["quantity"]; ?>x - <span class="price"><?php echo "Rs. ". number_format($item_price,2); ?></span></p>
-                            <p style="text-align:center;"><a href="beer.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
+                            <p style="text-align:center;"><a href="brandy.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
                             <?php
                                 $total_quantity += $item["quantity"];
                                 $total_price += ($item["price"]*$item["quantity"]);
@@ -173,7 +179,7 @@ require_once("carthandler.php");
                     <h2>Shop</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active"> Beer </li>
+                        <li class="breadcrumb-item active"> Brandy </li>
                     </ul>
                 </div>
             </div>
@@ -181,18 +187,18 @@ require_once("carthandler.php");
     </div>
     <!-- End All Title Box -->
 
-    <!-- Start Beer Page  -->
-        <div class="id">
+    <!-- Start Brandy Page -->
+    <div class="id">
                 <table border=0 align="center" width="80%">
                 <tr>
                     <td id="align">
                     <?php
-                        $product_array = $db_handle->runQuery("SELECT * FROM beer ORDER BY id ASC");
+                        $product_array = $db_handle->runQuery("SELECT * FROM brandy ORDER BY id ASC");
                         if (!empty($product_array)) { 
                             foreach($product_array as $key=>$value){
                     ?>
                         <div class="itemcontainer">
-                        <form method="post" action="beer.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                        <form method="post" action="brandy.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
                             <div class="image">
                                 <img class="bottlepics" src="<?php echo $product_array[$key]["image"]; ?>">
                             </div>
@@ -217,8 +223,7 @@ require_once("carthandler.php");
                 </tr>
                 </table>
         </div>
-
-    <!-- End Beer Page -->
+    <!-- End Brandy Page -->
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">

@@ -102,7 +102,13 @@ require_once("carthandler.php");
                     </ul>
                 </div>
                 <div class="submit-button text-center">
+                     <?php
+					if (isset($_SESSION['userid'])){
+						echo ' <form action="dbf/logout.dbf.php" method="POST">
                     <button class="btn hvr-hover" id="submit" type="submit">Log Out</button>
+					</form>';
+					}
+					?>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </div>

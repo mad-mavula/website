@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 require_once("dbcontroller.php");
 $db_handle = new DBController();
@@ -13,23 +13,21 @@ require_once("carthandler.php");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Site Metas -->
-    <title>Gallery</title>
+    <title>Mr. Liquid</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+    <!--login CSS-->
+    <link rel="stylesheet" type="text/css" href="css/floatcss.css">
 
 </head>
 
@@ -51,9 +49,9 @@ require_once("carthandler.php");
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link nav-item active dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -73,36 +71,47 @@ require_once("carthandler.php");
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge"></span>
-							<p>My Cart
-                                (<?php
-                                    if(isset($_SESSION["cart_item"])){
-                                        $total_quantity = 0;
-                                        foreach ($_SESSION["cart_item"] as $item){
-                                            $total_quantity += $item["quantity"];
-                                    }
-                                    echo $total_quantity; 
-                                }else{
-                                    echo "0";
-                                }?>) 
-                            </p>
-					</a></li>
+                        <li class="side-menu">
+							<a href="#">
+								<i class="fa fa-shopping-bag"></i>
+								<span class="badge"></span>
+								<p>My Cart
+                                    (<?php
+                                        if(isset($_SESSION["cart_item"])){
+                                            $total_quantity = 0;
+                                            foreach ($_SESSION["cart_item"] as $item){
+                                                $total_quantity += $item["quantity"];
+                                        }
+                                        echo $total_quantity; 
+                                    }else{
+                                        echo "0";
+                                    }?>) 
+                                </p>
+							</a>
+						</li>
                     </ul>
                 </div>
                 <div class="submit-button text-center">
+                  <?php
+					if(isset($_SESSION['userid'])){
+						echo '<form action="dbf/logout.dbf.php" method="POST">
                     <button class="btn hvr-hover" id="submit" type="submit">Log Out</button>
+					</form>';
+					}
+					
+					?>
+                   
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </div>
                 <!-- End Atribute Navigation -->
             </div>
+
             <!-- Start Side Menu -->
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <div>
-                    <a href="arrack.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
+                    <a href="index.php?action=empty" class="btn btn-default hvr-hover btn-cart">Empty Cart</a>
                 </div>
                 <?php
                     if(isset($_SESSION["cart_item"])){
@@ -119,7 +128,7 @@ require_once("carthandler.php");
                             <a href="#" class="photo"><img src="<?php echo $item["image"]; ?>" class="cart-thumb" alt="" /></a>
                             <h6><a href="#"><?php echo $item["name"]; ?></a></h6>
                             <p><?php echo $item["quantity"]; ?>x - <span class="price"><?php echo "Rs. ". number_format($item_price,2); ?></span></p>
-                            <p style="text-align:center;"><a href="gallery.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
+                            <p style="text-align:center;"><a href="index.php?action=remove&code=<?php echo $item["code"]; ?>"><img src="images/icon-delete.png" alt="Remove Item" style="width:25px;height:25px;">Remove Item</a></p>
                             <?php
                                 $total_quantity += $item["quantity"];
                                 $total_price += ($item["price"]*$item["quantity"]);
@@ -138,6 +147,7 @@ require_once("carthandler.php");
                 </li>
             </div>
             <!-- End Side Menu -->
+            
         </nav>
         <!-- End Navigation -->
     </header>
@@ -155,30 +165,106 @@ require_once("carthandler.php");
     </div>
     <!-- End Top Search -->
 
-    <!-- Start All Title Box -->
-    <div class="all-title-box">
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-center">
+                <img src="images/banner-01.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
+                            <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
+                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="images/banner-02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
+                            <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
+                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="images/banner-03.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
+                            <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
+                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Start Categories  -->
+    <div class="categories-shop">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2>Gallery</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Gallery</li>
-                    </ul>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="images/categories_img_01.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Beer</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Arrack</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="images/categories_img_03.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Wine</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="images/categories_img_04.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Whisky</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="images/categories_img_05.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Brandy</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="images/categories_img_06.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Vodka</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End All Title Box -->
+    <!-- End Categories -->
 
-    <!-- Start Gallery  -->
+    <!-- Start Products  -->
     <div class="products-box">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Our Gallery</h1>
-                        <p>Check out our products which got caught in the lens of a creative photographer.</p>
+                        <h1>Our Products</h1>
+                        <p>Take a look at some of our finest products.</p>
                     </div>
                 </div>
             </div>
@@ -187,175 +273,170 @@ require_once("carthandler.php");
                     <div class="special-menu text-center">
                         <div class="button-group filter-button-group">
                             <button class="active" data-filter="*">All</button>
-                            <button data-filter=".beer">Beer</button>
-                            <button data-filter=".vodka">Vodka</button>
-							<button data-filter=".wine">Wine</button>
-							<button data-filter=".brandy">Brandy</button>
-                            <button data-filter=".whisky">Whisky</button>
-                            <button data-filter=".arrack">Arrack</button>
+                            <button data-filter=".top-featured">Top featured</button>
+                            <button data-filter=".best-seller">Best sellers</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row special-list">
-                <div class="col-lg-3 col-md-6 special-grid beer">
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="images/gallery-img-01.jfif" class="img-fluid" alt="Image">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="images/gallery-img-01.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                 </ul>
+                                <a class="cart" href="#">Add to Cart</a>
                             </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Carlsberg Special Brew</h4>
+                            <h5> $7.79</h5>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid brandy">
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="images/gallery-img-02.jfif" class="img-fluid" alt="Image">
+                            <div class="type-lb">
+                                <p class="new">New</p>
+                            </div>
+                            <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="images/gallery-img-02.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                 </ul>
+                                <a class="cart" href="#">Add to Cart</a>
                             </div>
-                        </div>                        
+                        </div>
+                        <div class="why-text">
+                            <h4>Smirnoff Vodka</h4>
+                            <h5> $9.79</h5>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid wine">
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="images/gallery-img-03.jfif" class="img-fluid" alt="Image">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="images/gallery-img-03.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>                                
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
                             </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Corona Extra Beer</h4>
+                            <h5> $10.79</h5>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 special-grid vodka">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">                            
-                            <img src="images/gallery-img-04.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-04.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>                                
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-				<div class="col-lg-3 col-md-6 special-grid wine">
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="images/gallery-img-05.jfif" class="img-fluid" alt="Image">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="images/gallery-img-05.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                 </ul>
+                                <a class="cart" href="#">Add to Cart</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid whisky">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">                            
-                            <img src="images/gallery-img-06.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-06.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
+                        <div class="why-text">
+                            <h4>Johnny Walker | Black Label</h4>
+                            <h5> $15.79</h5>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid whisky">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <img src="images/gallery-img-07.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-07.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid arrack">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">                            
-                            <img src="images/gallery-img-08.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-08.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-				
-				<div class="col-lg-3 col-md-6 special-grid wine">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">                            
-                            <img src="images/gallery-img-09.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-09.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid beer">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <img src="images/gallery-img-10.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-10.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid beer">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">                           
-                            <img src="images/gallery-img-11.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-11.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid whisky">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <img src="images/gallery-img-12.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-12.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Gallery  -->
+    <!-- End Products  -->
+
+    <!-- Start Review  -->
+    <div class="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Reviews</h1>
+                        <p>What our customers think about us.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="review-box">
+                        <div class="review-img">
+                            <img class="img-fluid" src="images/review-img.jpg" alt="" />
+                        </div>
+                        <div class="review-content">
+                            <div class="title-review">
+                                <h3>Tishan</h3>
+                                <p>"Decent place. Clean and pretty well stocked."</p>
+                            </div>
+                            <ul class="option-review">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="review-box">
+                        <div class="review-img">
+                            <img class="img-fluid" src="images/review-img-01.jpg" alt="" />
+                        </div>
+                        <div class="review-content">
+                            <div class="title-review">
+                                <h3>Chirath</h3>
+                                <p>"Great Consumer Care! Cannot explain how great it is to see a great customer service like that."</p>
+                            </div>
+                            <ul class="option-review">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="review-box">
+                        <div class="review-img">
+                            <img class="img-fluid" src="images/review-img-02.jpg" alt="" />
+                        </div>
+                        <div class="review-content">
+                            <div class="title-review">
+                                <h3>Mahen</h3>
+                                <p>“Fast and reliable delivery”</p>
+                            </div>
+                            <ul class="option-review">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Review  -->
+
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
@@ -444,7 +525,8 @@ require_once("carthandler.php");
     </div>
     <!-- End Instagram Feed  -->
 
-  <!-- Start Footer  -->
+
+    <!-- Start Footer  -->
     <footer>
         <div class="footer-main">
             <div class="container">
