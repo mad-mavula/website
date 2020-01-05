@@ -32,6 +32,7 @@ require_once("carthandler.php");
 </head>
 
 <body>
+
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
@@ -145,6 +146,7 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
+                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
             </div>
             <!-- End Side Menu -->
             
@@ -492,6 +494,7 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+
 </body>
 
 </html>

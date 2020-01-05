@@ -30,6 +30,8 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <!--login CSS-->
+    <link rel="stylesheet" type="text/css" href="css/floatcss.css">
 
 </head>
 
@@ -142,6 +144,7 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
+                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -418,6 +421,35 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+
+    <!--Start Pop up menu-->
+    <div class="float-bg">
+        <div class="float-content">
+            <div class="exit">+</div>
+            <img class="img" src="icon.png">
+            <form method="POST" action="">
+                <table border="0">
+                    <tr>
+                        <td>
+                            <input class="textboxes" type="text" name="username" placeholder="Enter Your Username" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="textboxes" type="password" name="pword" placeholder="Enter Your Password" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btnlog" type="submit" name="loginbtn">Login</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!--End Pop up menu-->
+    
 </body>
 
 </html>
