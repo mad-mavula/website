@@ -32,6 +32,7 @@ require_once("carthandler.php");
 </head>
 
 <body>
+
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
@@ -145,6 +146,7 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
+                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
             </div>
             <!-- End Side Menu -->
             
@@ -152,18 +154,6 @@ require_once("carthandler.php");
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
-
-    <!-- Start Top Search -->
-    <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div>
-    <!-- End Top Search -->
 
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
@@ -175,7 +165,7 @@ require_once("carthandler.php");
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
                             <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
-                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="arrack.php">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +177,7 @@ require_once("carthandler.php");
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
                             <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
-                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="arrack.php">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -199,7 +189,7 @@ require_once("carthandler.php");
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
                             <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
-                            <p><a class="btn hvr-hover" href="#">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="arrack.php">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -219,37 +209,37 @@ require_once("carthandler.php");
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="images/categories_img_01.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Beer</a>
+                        <a class="btn hvr-hover" href="beer.php">Beer</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Arrack</a>
+                        <a class="btn hvr-hover" href="arrack.php">Arrack</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="images/categories_img_03.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Wine</a>
+                        <a class="btn hvr-hover" href="wine.php">Wine</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="images/categories_img_04.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Whisky</a>
+                        <a class="btn hvr-hover" href="whisky.php">Whiskey</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="images/categories_img_05.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Brandy</a>
+                        <a class="btn hvr-hover" href="brandy.php">Brandy</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="images/categories_img_06.jpg" alt="" />
-                        <a class="btn hvr-hover" href="#">Vodka</a>
+                        <a class="btn hvr-hover" href="vodka.php">Vodka</a>
                     </div>
                 </div>
             </div>
@@ -437,95 +427,6 @@ require_once("carthandler.php");
     </div>
     <!-- End Review  -->
 
-
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
-        <div class="main-instagram owl-carousel owl-theme">
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-01.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-02.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-03.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-04.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-06.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Instagram Feed  -->
-
-
     <!-- Start Footer  -->
     <footer>
         <div class="footer-main">
@@ -593,6 +494,7 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+
 </body>
 
 </html>
