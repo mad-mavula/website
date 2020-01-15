@@ -99,7 +99,11 @@ require_once("carthandler.php");
                                     echo "0";
                                 }?>) 
                             </p>
-					</a></li>
+					    </a>
+                    </li>
+                    <li>
+                        <a class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                    </li>
                     </ul>
                 </div>
                 <div class="submit-button text-center">
