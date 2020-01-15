@@ -90,6 +90,9 @@ require_once("carthandler.php");
                                 </p>
 							</a>
 						</li>
+						<li>
+                            <a class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="submit-button text-center">
@@ -165,7 +168,7 @@ require_once("carthandler.php");
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
                             <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
-                            <p><a class="btn hvr-hover" href="arrack.php">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="#catshop">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -177,7 +180,7 @@ require_once("carthandler.php");
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
                             <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
-                            <p><a class="btn hvr-hover" href="arrack.php">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="#catshop">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -189,7 +192,7 @@ require_once("carthandler.php");
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br>Mr. Liquid</strong></h1>
                             <p class="m-b-40">Money doesn't buy happines,<br> unless you're spending it on booze!</p>
-                            <p><a class="btn hvr-hover" href="arrack.php">Shop Now</a></p>
+                            <p><a class="btn hvr-hover" href="#catshop">Shop Now</a></p>
                         </div>
                     </div>
                 </div>
@@ -203,7 +206,8 @@ require_once("carthandler.php");
     <!-- End Slider -->
 
     <!-- Start Categories  -->
-    <div class="categories-shop">
+    <section id="catshop">
+      <div class="categories-shop">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -244,120 +248,9 @@ require_once("carthandler.php");
                 </div>
             </div>
         </div>
-    </div>
+      </div>
+    </section>
     <!-- End Categories -->
-
-    <!-- Start Products  -->
-    <div class="products-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="title-all text-center">
-                        <h1>Our Products</h1>
-                        <p>Take a look at some of our finest products.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="special-menu text-center">
-                        <div class="button-group filter-button-group">
-                            <button class="active" data-filter="*">All</button>
-                            <button data-filter=".top-featured">Top featured</button>
-                            <button data-filter=".best-seller">Best sellers</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row special-list">
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Sale</p>
-                            </div>
-                            <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Add to Cart</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Carlsberg Special Brew</h4>
-                            <h5> $7.79</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="new">New</p>
-                            </div>
-                            <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Add to Cart</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Smirnoff Vodka</h4>
-                            <h5> $9.79</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid top-featured">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Sale</p>
-                            </div>
-                            <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Add to Cart</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Corona Extra Beer</h4>
-                            <h5> $10.79</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 special-grid best-seller">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <div class="type-lb">
-                                <p class="sale">Sale</p>
-                            </div>
-                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Add to Cart</a>
-                            </div>
-                        </div>
-                        <div class="why-text">
-                            <h4>Johnny Walker | Black Label</h4>
-                            <h5> $15.79</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Products  -->
 
     <!-- Start Review  -->
     <div class="reviews">
