@@ -91,7 +91,8 @@ require_once("carthandler.php");
 							</a>
 						</li>
 						<li>
-                            <a class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                          <a id="signin" class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                         
                         </li>
                     </ul>
                 </div>
@@ -376,6 +377,7 @@ require_once("carthandler.php");
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
+     <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <script src="js/inewsticker.js"></script>

@@ -106,7 +106,7 @@ require_once("carthandler.php");
 					    </a>
                     </li>
                     <li>
-                        <a class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                         <a id="signin" class="btn btn-default hvr-hover btn-cart">Sign In</a>
                     </li>
                     </ul>
                 </div>
