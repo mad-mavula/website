@@ -156,7 +156,14 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
-                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
+                <?php if (isset($_SESSION['userid'])){
+	                     $logged=1;
+	
+                } else{ $logged=0; }   ?>
+                <script>
+					var check="<?php echo $logged; ?>";
+				</script>
+                <button class="btn btn-default hvr-hover btn-cart" onClick="checklogin(check)">Checkout</button>
             </div>
             <!-- End Side Menu -->
         </nav>

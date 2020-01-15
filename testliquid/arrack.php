@@ -38,7 +38,7 @@ require_once("carthandler.php");
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
      
     <script language="javascript" type="text/javascript" src="js/test1.js"></script>
-    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
+    
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -157,7 +157,14 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
-                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
+                <?php if (isset($_SESSION['userid'])){
+	                     $logged=1;
+	
+                } else{ $logged=0; }  ?>
+                <script>
+					var check="<?php echo $logged; ?>";
+				</script>
+                <button class="btn btn-default hvr-hover btn-cart" onClick="checklogin(check)">Checkout</button>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -192,7 +199,7 @@ require_once("carthandler.php");
                             foreach($product_array as $key=>$value){
                     ?>
                         <div class="itemcontainer">
-                        <form method="post" action="arrack.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                        <form method="post"  action="arrack.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
                             <div class="image">
                                 <img class="bottlepics" src="<?php echo $product_array[$key]["image"]; ?>">
                             </div>
@@ -273,6 +280,7 @@ require_once("carthandler.php");
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
+    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

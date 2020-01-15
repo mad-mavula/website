@@ -30,7 +30,7 @@ if(isset($_POST['loginbtn'])){
 				else{
 					session_start();
 					$_SESSION['userid']=row['uid'];
-					$logged=1;
+					
 					header("Location:../index.php?login=success");
 	                exit();
 				}
