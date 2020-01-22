@@ -18,14 +18,12 @@ require_once("carthandler.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Site Icons -->
+    <!-- Site Icon -->
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
     <!--login CSS-->
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
 
@@ -90,10 +88,6 @@ require_once("carthandler.php");
                                 </p>
 							</a>
 						</li>
-						<li>
-                          <a id="signin" class="btn btn-default hvr-hover btn-cart">Sign In</a>
-                         
-                        </li>
                     </ul>
                 </div>
                 <div class="submit-button text-center">
@@ -372,11 +366,10 @@ require_once("carthandler.php");
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
-    <!-- ALL JS FILES -->
+    <!-- JS FILE -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
      <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
@@ -389,6 +382,7 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
 </body>
 

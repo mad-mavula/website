@@ -32,7 +32,7 @@
     border-radius: 4px;
 }
 
-.exit {
+.ex {
 	position: absolute;
 	top: 0;
 	right: 14px;
@@ -60,6 +60,7 @@
     background-color: black;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .button:hover {

@@ -29,8 +29,6 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
     <!--login CSS-->
@@ -102,7 +100,7 @@ require_once("carthandler.php");
 					    </a>
                     </li>
                     <li>
-                        <a class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                        <a id="signin" class="btn btn-default hvr-hover btn-cart">Sign In</a>
                     </li>
                     </ul>
                 </div>
@@ -295,22 +293,23 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
     <!--Start Pop up menu-->
     <div class="float-bg">
-        <div class="float-content" id="popup">
-            <div class="exit">+</div>
-            <img class="img" src="icon.png">
-            <form method="POST" action="">
+        <div class="float-content">
+             <div class="ex" onclick="exit()" id="ex">+</div>
+            <img class="img" src="images/icon-log.png">
+            <form method="POST" action="dbf/login.dbf.php">
                 <table border="0">
                     <tr>
                         <td>
-                            <input class="textboxes" type="text" name="username" placeholder="Enter Your Username" required="">
+                            <input class="textboxes" type="text" name="ud" placeholder="Enter Your Username" required="">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input class="textboxes" type="password" name="pword" placeholder="Enter Your Password" required="">
+                            <input class="textboxes" type="password" name="password" placeholder="Enter Your Password" required="">
                         </td>
                     </tr>
                     <tr>
@@ -323,7 +322,6 @@ require_once("carthandler.php");
         </div>
     </div>
     <!--End Pop up menu-->
-
 </body>
 
 </html>

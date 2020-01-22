@@ -93,7 +93,7 @@ require_once("carthandler.php");
 					    </a>
                     </li>
                     <li>
-                        <a class="btn btn-default hvr-hover btn-cart">Sign In</a>
+                        <a id="signin" class="btn btn-default hvr-hover btn-cart">Sign In</a>
                     </li>
                     </ul>
                 </div>
@@ -204,11 +204,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-01.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-01.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,12 +212,7 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-02.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-02.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>                        
+                        </div>                    
                     </div>
                 </div>
 
@@ -230,11 +220,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-03.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-03.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>                                
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,11 +228,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">                            
                             <img src="images/gallery-img-04.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-04.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>                                
-                            </div>
                         </div>                        
                     </div>
                 </div>
@@ -255,11 +235,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-05.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-05.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -268,11 +243,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">                            
                             <img src="images/gallery-img-06.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-06.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -281,11 +251,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-07.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-07.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -294,11 +259,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">                            
                             <img src="images/gallery-img-08.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-08.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>                        
                     </div>
                 </div>
@@ -307,10 +267,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">                            
                             <img src="images/gallery-img-09.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-09.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,11 +275,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-10.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-10.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -332,11 +283,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">                           
                             <img src="images/gallery-img-11.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-11.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>                                
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -345,11 +291,6 @@ require_once("carthandler.php");
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <img src="images/gallery-img-12.jfif" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="images/gallery-img-12.jfif" data-toggle="tooltip" target="_blank" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                </ul>
-                            </div>
                         </div>                        
                     </div>
                 </div>
@@ -425,22 +366,23 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
     <!--Start Pop up menu-->
     <div class="float-bg">
         <div class="float-content">
-            <div class="exit">+</div>
-            <img class="img" src="icon.png">
-            <form method="POST" action="">
+             <div class="ex" onclick="exit()" id="ex">+</div>
+            <img class="img" src="images/icon-log.png">
+            <form method="POST" action="dbf/login.dbf.php">
                 <table border="0">
                     <tr>
                         <td>
-                            <input class="textboxes" type="text" name="username" placeholder="Enter Your Username" required="">
+                            <input class="textboxes" type="text" name="ud" placeholder="Enter Your Username" required="">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input class="textboxes" type="password" name="pword" placeholder="Enter Your Password" required="">
+                            <input class="textboxes" type="password" name="password" placeholder="Enter Your Password" required="">
                         </td>
                     </tr>
                     <tr>
