@@ -38,7 +38,6 @@ require_once("carthandler.php");
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
 
     <script language="javascript" type="text/javascript" src="js/test1.js"></script>
-      <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -297,11 +296,12 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
    <!--Start Pop up menu-->
     <div class="float-bg">
         <div class="float-content">
-            <div class="exit">+</div>
+             <div class="ex" onclick="exit()" id="ex">+</div>
             <img class="img" src="images/icon-log.png">
             <form method="POST" action="dbf/login.dbf.php">
                 <table border="0">

@@ -38,6 +38,7 @@ require_once("carthandler.php");
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
      
     <script language="javascript" type="text/javascript" src="js/test1.js"></script>
+
     
 
     <!--[if lt IE 9]>
@@ -294,17 +295,12 @@ require_once("carthandler.php");
     <script src="js/inewsticker.js"></script>
     <script src="js/bootsnav.js."></script>
     <script src="js/images-loded.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
 
     <!--Start Pop up menu-->
     <div class="float-bg">
         <div class="float-content">
-            <div class="exit">+</div>
+            <div class="ex" onclick="exit()" id="ex">+</div>
             <img class="img" src="images/icon-log.png">
             <form method="POST" action="dbf/login.dbf.php">
                 <table border="0">

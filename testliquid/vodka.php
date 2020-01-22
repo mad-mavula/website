@@ -25,20 +25,13 @@ require_once("carthandler.php");
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--login CSS-->
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
-
-    <script language="javascript" type="text/javascript" src="js/test1.js"></script>
-      <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -296,11 +289,13 @@ require_once("carthandler.php");
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
+    <script language="javascript" type="text/javascript" src="js/test1.js"></script>
 
     <!--Start Pop up menu-->
     <div class="float-bg">
         <div class="float-content">
-            <div class="exit">+</div>
+             <div class="ex" onclick="exit()" id="ex">+</div>
             <img class="img" src="images/icon-log.png">
             <form method="POST" action="dbf/login.dbf.php">
                 <table border="0">
