@@ -7,20 +7,13 @@ require_once("carthandler.php");
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- Basic -->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Site Metas -->
     <title>Contact Us</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
@@ -33,11 +26,6 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/custom.css">
     <!--login CSS-->
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -154,7 +142,7 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
-                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
+                <a href="checkout.php" class="btn btn-default hvr-hover btn-cart">Checkout</a>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -332,6 +320,9 @@ require_once("carthandler.php");
                     <tr>
                         <td>
                             <button class="btnlog" type="submit" name="loginbtn">Login</button>
+                        </td>
+                        <td>
+                            <a href="signup.php" class="btn btn-default hvr-hover btn-cart">Sign up</a>
                         </td>
                     </tr>
                 </table>

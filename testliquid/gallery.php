@@ -26,8 +26,6 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
     <!--login CSS-->
@@ -148,7 +146,7 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
-                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
+                <a href="checkout.php" class="btn btn-default hvr-hover btn-cart">Checkout</a>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -352,19 +350,11 @@ require_once("carthandler.php");
 
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
-    <script src="js/inewsticker.js"></script>
     <script src="js/bootsnav.js."></script>
     <script src="js/images-loded.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
     <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
@@ -388,6 +378,9 @@ require_once("carthandler.php");
                     <tr>
                         <td>
                             <button class="btnlog" type="submit" name="loginbtn">Login</button>
+                        </td>
+                        <td>
+                            <a href="signup.php" class="btn btn-default hvr-hover btn-cart">Sign up</a>
                         </td>
                     </tr>
                 </table>
