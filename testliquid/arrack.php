@@ -169,7 +169,7 @@ require_once("carthandler.php");
                 <script>
 					var check="<?php echo $logged; ?>";
 				</script>
-                <button class="btn btn-default hvr-hover btn-cart" onClick="checklogin(check)">Checkout</button>
+                <a href="checkout.php" class="btn btn-default hvr-hover btn-cart">Checkout</a>
             </div>
             <!-- End Side Menu -->
         </nav>
@@ -289,7 +289,6 @@ require_once("carthandler.php");
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <script src="js/inewsticker.js"></script>
@@ -317,6 +316,9 @@ require_once("carthandler.php");
                     <tr>
                         <td>
                             <button class="btnlog" type="submit" name="loginbtn">Login</button>
+                        </td>
+                        <td>
+                            <a href="signup.php" class="btn btn-default hvr-hover btn-cart">Sign up</a>
                         </td>
                     </tr>
                 </table>

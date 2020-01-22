@@ -7,24 +7,15 @@ require_once("carthandler.php");
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- Basic -->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Site Metas -->
     <title>About Us</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
@@ -33,11 +24,6 @@ require_once("carthandler.php");
     <link rel="stylesheet" href="css/custom.css">
     <!--login CSS-->
     <link rel="stylesheet" type="text/css" href="css/floatcss.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -154,7 +140,7 @@ require_once("carthandler.php");
                         ?>
                     </ul>
                 </li>
-                <a href="" class="btn btn-default hvr-hover btn-cart">Checkout</a>
+                <a href="checkout.php" class="btn btn-default hvr-hover btn-cart">Checkout</a>
                 </div>
             </div>
             <!-- End Side Menu -->
@@ -279,19 +265,12 @@ require_once("carthandler.php");
 
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
-    <script src="js/inewsticker.js"></script>
     <script src="js/bootsnav.js."></script>
     <script src="js/images-loded.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
     <script language="javascript" type="text/javascript" src="js/floatjs.js"></script>
 
@@ -315,6 +294,9 @@ require_once("carthandler.php");
                     <tr>
                         <td>
                             <button class="btnlog" type="submit" name="loginbtn">Login</button>
+                        </td>
+                        <td>
+                            <a href="signup.php" class="btn btn-default hvr-hover btn-cart">Sign up</a>
                         </td>
                     </tr>
                 </table>
